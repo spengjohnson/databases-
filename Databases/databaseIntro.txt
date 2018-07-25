@@ -1,0 +1,76 @@
+1. What data types do each of these values represent? 
+	1. string
+	2. integer 
+	3. object
+	4. float 
+	5. object 
+
+2. Explain when a database would be used. Explain when a text file would be used. 
+
+A database can be used whenever we need to store, manipulate, calculate, or retrieve any data. Good examples of this might be inventory, usernames and passwords, purchase orders, users, etc. The biggest reason to use a database over a text file is for better structure/organization. A text file would be used if organization/structure are NOT as important for your data. Text files are easier to retrieve/save when in this format, so it might be worth considering if you're afraid of losing your data. Text files take up less space, which is another reason to consider using a text file if space is a concern. 
+
+3. Describe one difference between SQL and other programming languages.
+
+SQL uses "=" as an equality operator, whereas others need to use "===" to be equivalent. 
+
+4. In your own words, explain how the pieces of a database system fit tighter at a high level. 
+
+Databases are a way to organize large amounts of data that are all linked together, meaning all the data have relationships with one another. For example, Sally Smith is tied to her email address, sallysmith@gmail.com. At a higher level, I think of how databases are related to servers. Data is usually handled and stored on the server side. The server allows us to efficiently deliver information to users, so it creates a better user experience. Server-side programming helps with efficient storage and delivery of information. If a database is able to neatly and efficiently store data about a certain topic, then the server-side only helps amplify that. 
+
+5. Explain the meaning of table, row, column, and value. 
+
+A table is foundation of a database structure. The rows, columns and values all help make up the components of the table. Each column can label what should be stored there. Each row can also help specify what's stored in each cell. Each cell contains a value related to the column and the row. 
+
+6. List 3 data types that can be used in a table. 
+
+strings, integers, float
+
+7. Given this payments table, provide an English description of the following queries and include their results. 
+
+     SELECT date, amount
+     FROM payments;
+
+Select the date and amount columns from the payments table. 
+INSERT INTO payments
+  "date",       "amount"
+  '2016-05-01',  1500.00
+  '2016-05-10',  37.00,
+  '2016-05-15',  124.93
+  '2016-05-23',  54.72
+
+
+     SELECT amount
+     FROM payments
+     WHERE amount > 500;
+Select the amount from the payments table where they are >500. 
+amount 
+1500.00
+
+     SELECT *
+     FROM payments
+     WHERE payee = 'Mega Foods';
+Select all of the columns for the set of rows from the payments table, where the payee is Mega Foods. 
+
+INSERT INTO payments
+  ("date",       "payee",                "amount", "memo")
+  ('2016-05-15', 'Mega Foods',            124.93,  'Groceries')
+
+8. Given this users table, write SQL queries using the following criteria and include the output. 
+- the email and signup date for the user named DeAndre Data. 
+
+SELECT email and signup 
+FROM users 
+WHERE name = DeAndre Data; 
+
+- the user ID for the user with email 'aleesia.algorithm@uw.edu'
+
+SELECT userid 
+FROM users 
+WHERE email = 'aleesia.algorithm@uw.edu'; 
+
+-all the columns for the user ID equal to 4. 
+
+SELECT * 
+FROM users 
+WHERE userID = 4; 
+  
